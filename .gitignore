@@ -151,3 +151,5 @@ fabric.properties
 
 
 momos/momazos/migrations/
+media/
+momos/db.sqlite3

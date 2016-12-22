@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Momo
+
+
+@admin.register(Momo)
+class AdminMomo(admin.ModelAdmin):
+    list_display = ('name',)
