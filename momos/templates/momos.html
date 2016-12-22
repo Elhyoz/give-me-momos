@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<h1>Galeria de Momos :v </h1>
+<ul>
+	{% for momo in momos %}
+	<li>{{ momo.name }}</li>
+	<figure>
+		<img src="{{ momo.image.url }}" alt="" style="height: 250px;">
+	</figure>
+	{% endfor %}
+
+
+</ul>
+{% endblock %}

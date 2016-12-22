@@ -6,6 +6,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^momo-admin/', admin.site.urls),
     url(r'^', include('momazos.urls')),
+
 ]
 
 if settings.DEBUG:
