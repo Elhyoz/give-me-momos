@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from blog.forms import MomoForm
 from blog.models import Momo
 
 
@@ -24,10 +25,20 @@ def momos(request):
 
 
 def new_momo(request):
-    los_momos = Momo.objects.all()
+    if request.method == 'POST':
+        form = MomoForm(request.POST, request.FILES)
+        if form.is_valid():
+            momo = form.save(commit=False)
+            momo.save()
+            return redirect('/momos/')
+    else:
+        form = MomoForm()
+
+    momo_objects = Momo.objects.all()
     template = 'momos/new_momo.html'
     context = {
-        'momos': los_momos,
+        'momos': momo_objects,
+        'form': form
     }
 
     return render(request, template, context)
