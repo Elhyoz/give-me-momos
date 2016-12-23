@@ -15,7 +15,17 @@ def index(request):
 
 def momos(request):
     los_momos = Momo.objects.all()
-    template = 'momos.html'
+    template = 'momos/momos.html'
+    context = {
+        'momos': los_momos,
+    }
+
+    return render(request, template, context)
+
+
+def new_momo(request):
+    los_momos = Momo.objects.all()
+    template = 'momos/momos.html'
     context = {
         'momos': los_momos,
     }

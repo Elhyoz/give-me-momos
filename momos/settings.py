@@ -9,7 +9,7 @@ SECRET_KEY = 'qdumng34$1x(#0(+tbmi#p4_uc44zvbfy=bn*i=p1t1bgvo#to'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
