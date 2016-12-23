@@ -1,19 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<br>
-<br>
-<br>
-<br>
-<h1>Galeria de Momos :v </h1>
-<ul>
-	{% for momo in momos %}
-	<li>{{ momo.name }}</li>
-	<figure>
-		<img src="{{ momo.image.url }}" alt="" style="height: 250px;">
-	</figure>
-	{% endfor %}
+<div class="container">
+	<h1>Galeria de Momos :v </h1>
 
-
-</ul>
+	<div class="row">
+		{% for momo in momos %}
+		<div class="col-xs-12 col-lg-6">
+			<div class="card">
+				<img class="card-img-top" src="{{ momo.image.url }}" alt="Card image cap">
+				<div class="card-block">
+					<h4 class="card-title">{{ momo.name }}</h4>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}

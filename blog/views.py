@@ -25,7 +25,7 @@ def momos(request):
 
 def new_momo(request):
     los_momos = Momo.objects.all()
-    template = 'momos/momos.html'
+    template = 'momos/new_momo.html'
     context = {
         'momos': los_momos,
     }

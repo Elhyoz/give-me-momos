@@ -1,13 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>MOMAZOS</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet"> 
+
+  <!-- styles -->
+  <link rel="stylesheet" href="{% static "css/styles.css" %}">
 </head>
 <body>
-  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-    <a class="navbar-brand" href="{% url 'blog:index' %}">Momero</a>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse" id="navbar">
+    <a class="navbar-brand nav-title" href="{% url 'blog:index' %}">Momero</a>
     <ul class="nav navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'blog:momos' %}">Momos <span class="sr-only">(current)</span></a>
