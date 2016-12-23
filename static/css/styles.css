@@ -3,8 +3,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.container {
+.container-fluid {
 	margin-top: 6rem;
+}
+
+.img-momo {
+	height: auto;
+	width: 100%;
 }
 
 .nav-title {
