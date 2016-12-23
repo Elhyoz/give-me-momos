@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-from .models import Momo
+from blog.models import Momo
+
 
 def index(request):
     template = 'index.html'

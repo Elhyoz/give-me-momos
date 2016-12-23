@@ -150,6 +150,6 @@ crashlytics-build.properties
 fabric.properties
 
 
-momos/momazos/migrations/
+blog/migrations/
 media/
-momos/db.sqlite3
+db.sqlite3
