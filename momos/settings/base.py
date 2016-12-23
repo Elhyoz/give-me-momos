@@ -6,12 +6,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'qdumng34$1x(#0(+tbmi#p4_uc44zvbfy=bn*i=p1t1bgvo#to'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,7 +34,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates/'),
+            os.path.join(BASE_DIR, '../templates/'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -55,17 +49,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'momos.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 
@@ -105,7 +88,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/')
+    os.path.join(BASE_DIR, '../static/')
 ]
 
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
